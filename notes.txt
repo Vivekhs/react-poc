@@ -1,0 +1,34 @@
+1. npm init
+2. npm install -S webpack
+3. npm install -g webpack
+4. npm install lodash
+5. npm install jquery
+6. set NODE_ENV=production
+7. webpack => to generate output scripts.min.js file
+lodash is underscore js
+
+8. npm install will install all npm dependencies mentioned in package.json file
+9. use webpack --watch to retranspile code on every change.
+10. npm install webpack-dev-server
+11. webpack-dev-server --content-base src command to serve application : Pass content base location which will exclude unnecessary folders like node_modules
+12. open localhost:8080 to see the app running
+13. http://localhost:8080/webpack-dev-server/index.html : to open index.html in new frame.
+14. webpack-dev-server --content-base src --inline --hot : will do inlining automatically
+15. run "npm run dev" after adding "dev": "webpack-dev-server --content-base src --inline --hot" in package.json->scripts
+"scripts": {
+    "dev": "webpack-dev-server --content-base src --inline --hot",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+
+16. If you want to reference webpack-dev-server of your repository (inside node_modules folder) then uninstall global webpack-dev-server from your system:
+
+-> npm uninstall -g webpack-dev-server
+-> Add "dev": "./node_modules/.bin/webpack-dev-server --content-base src --inline --hot" in package.json->scripts
+-> npm run dev
+
+16. Components return one DOM element. So, to return multiple element we have to use a wrapper "<div></div>"
+17. by default this.state ===null -> true
+18. Whenever state changes on a component, the component will automatically rerender and update the DOM if there are any changes.
+19. For routing on single-page-app: npm install -S react-router & npm install -S history (supported with html5)
+20. <Route path ="archives(/:article)" name="archives" component={Archives}></Route> "()" over /:article will make this optional
+21. Plugin react-html-attrs will convert class arrtibute into className
